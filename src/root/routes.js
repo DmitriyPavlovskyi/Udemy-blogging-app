@@ -1,8 +1,13 @@
 import React from 'react';
 import { Route, IndexRoute } from 'react-router';
+import Posts from '../features/posts/index';
 
 import Root from './app';
 
+// In nested routes we can get access to inner components via this.props.children in parent component
+// IndexRoute needs to render nested component together with parent one at same time
 export default (
-  <Route path="/" component={Root} />
+  <Route path="/" component={Root}>
+    <IndexRoute component={Posts} />
+  </Route>
 );

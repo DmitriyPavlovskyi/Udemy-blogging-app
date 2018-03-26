@@ -13,7 +13,7 @@ class App extends Component {
     return (
       <div>
         <Router history={browserHistory} routes={routes}/>
-        <div>Hello world</div>
+        <div>{this.props.children}</div>
       </div>
     );
   }
