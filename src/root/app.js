@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Router, browserHistory } from 'react-router';
+import routes from './routes';
 
 class App extends Component {
   constructor(props) {
@@ -10,7 +12,8 @@ class App extends Component {
   render() {
     return (
       <div>
-        Hello world
+        <Router history={browserHistory} routes={routes}/>
+        <div>Hello world</div>
       </div>
     );
   }
