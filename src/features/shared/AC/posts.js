@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { FETCH_POSTS, ROOT_URL, API_KEY, CREATE_POST } from '../constants';
+import { FETCH_POSTS, FETCH_POST, ROOT_URL, API_KEY, CREATE_POST } from '../constants';
 
 export function fetchPosts() {
   const request = axios.get(`${ROOT_URL}/posts${API_KEY}`);
@@ -14,7 +14,16 @@ export function createPost(props) {
   const request = axios.post(`${ROOT_URL}/posts${API_KEY}`, props);
 
   return {
-    CREATE_POST,
+    type: CREATE_POST,
+    payload: request
+  }
+}
+
+export function fetchPost(id) {
+  const request = axios.get(`${ROOT_URL}/posts/${id}${API_KEY}`);
+
+  return {
+    type: FETCH_POST,
     payload: request
   }
 }

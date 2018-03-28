@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import PostsReducer from '../features/posts/reducer';
+import PostsReducer from '../features/shared/reducer';
 import { reducer as formReducer } from 'redux-form';
 
 const rootReducer = combineReducers({
