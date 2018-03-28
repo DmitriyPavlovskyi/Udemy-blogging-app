@@ -1,4 +1,4 @@
-import { FETCH_POSTS } from '../posts/AC/fetchPosts';
+import { FETCH_POSTS } from '../shared/constants';
 
 const initialState = { all: [], post: null };
 

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { fetchPosts } from './AC/fetchPosts';
+import { fetchPosts } from '../shared/AC/posts';
 import { Link } from 'react-router';
 
 class Posts extends React.Component {
