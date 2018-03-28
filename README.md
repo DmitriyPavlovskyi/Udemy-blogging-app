@@ -1,7 +1,7 @@
 # React app
 
 ### Using:
-React
+React, redux, redux-forms, react-router, axios
 
 #### Commands
 
